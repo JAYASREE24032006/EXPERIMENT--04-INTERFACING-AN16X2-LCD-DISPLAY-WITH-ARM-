@@ -43,7 +43,7 @@ The LCD can work in two different modes, namely the 4-bit mode and the 8-bit mod
 There are some preset commands instructions in LCD, which we need to send to LCD through some microcontroller. Some important command instructions are given below:
 
 #### Hex Code :
-Command to LCD Instruction Register
+Command to LCD Instruction Register :
 
 0F - LCD ON, cursor ON
 
