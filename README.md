@@ -1,14 +1,14 @@
-# EX4-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM AND DISPLAY STRING
+# EX3 - INTERFACING AN 16X2 LCD DISPLAY WITH ARM
 
-## Aim : 
+## AIM : 
 
-To Interface a 16X2 LCD display to ARM controller  , and simulate it in Proteus.
+To Interface a 16X2 LCD display to ARM controller , and simulate it in Proteus.
 
-## Components required : 
+## COMPONENTS REQUIRED : 
 
 STM32 CUBE IDE, Proteus 8 simulator.
 
-## Theory :
+## THEORY :
 
 The full form of an ARM is an advanced reduced instruction set computer (RISC) machine, and it is a 32-bit processor architecture expanded by ARM holdings. The applications of an ARM processor include several microcontrollers as well as processors. The architecture of an ARM processor was licensed by many corporations for designing ARM processor-based SoC products and CPUs. This allows the corporations to manufacture their products using ARM architecture. Likewise, all main semiconductor companies will make ARM-based SOCs such as Samsung, Atmel, TI etc.
 
@@ -34,15 +34,15 @@ Below is the Pinout and Pin Description of 16x2 LCD Module:
 
 
 
-### 4-bit and 8-bit Mode of LCD :
+### 4-BIT AND 8-BIT MODE OF LCD :
 
 The LCD can work in two different modes, namely the 4-bit mode and the 8-bit mode. In 4 bit mode we send the data nibble by nibble, first upper nibble and then lower nibble. For those of you who don’t know what a nibble is: a nibble is a group of four bits, so the lower four bits (D0-D3) of a byte form the lower nibble while the upper four bits (D4-D7) of a byte form the higher nibble. This enables us to send 8 bit data.Whereas in 8 bit mode we can send the 8-bit data directly in one stroke since we use all the 8 data lines.8-bit mode is faster and flawless than 4-bit mode. But the major drawback is that it needs 8 data lines connected to the microcontroller. This will make us run out of I/O pins on our MCU, so 4-bit mode is widely used. No control pins are used to set these modes. 
 
-### LCD Commands :
+### LCD COMMANDS :
 
 There are some preset commands instructions in LCD, which we need to send to LCD through some microcontroller. Some important command instructions are given below:
 
-#### Hex Code :
+#### HEX CODE :
 Command to LCD Instruction Register :
 
 0F - LCD ON, cursor ON
@@ -83,18 +83,18 @@ C1 - Jump to second line, position 1
 C2 - Jump to second line, position 2
 
  
-## Procedure :
+## PROCEDURE :
 
-### STEP-1 :
 
-click on STM 32 CUBE IDE, the following screen will appear 
+
+1. click on STM 32 CUBE IDE, the following screen will appear 
 
 
  ![image](https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png)
 
- ### STEP-2 :
+
  
- click on FILE, click on new stm 32 project 
+2. click on FILE, click on new stm 32 project 
 
  
  ![image](https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png)
@@ -103,31 +103,30 @@ click on STM 32 CUBE IDE, the following screen will appear
 ![image](https://user-images.githubusercontent.com/36288975/226189230-bf2d90dd-9695-4aaf-b2a6-6d66454e81fc.png)
 
 
-### STEP-3 :
 
-Select the target to be programmed  as shown below and click on next 
+3. Select the target to be programmed  as shown below and click on next 
 
 ![image](https://user-images.githubusercontent.com/36288975/226189280-ed5dcf1d-dd8d-43ae-815d-491085f4863b.png)
 
 
-### STEP-4 :
 
-select the program name 
+
+4. select the program name 
 
 
 ![image](https://user-images.githubusercontent.com/36288975/226189316-09832a30-4d1a-4d4f-b8ad-2dc28f137711.png)
 
 
-### STEP-5 : 
 
-corresponding ioc file will be generated automatically
+
+5. corresponding ioc file will be generated automatically
 
 ![image](https://user-images.githubusercontent.com/36288975/226189378-3abbdee2-0df6-470f-a3cd-79c74e3d3ad8.png)
 
 
-### STEP-6 : 
 
-select the appropriate pins as gipo, in or out, USART or required options and configure 
+
+6. select the appropriate pins as gipo, in or out, USART or required options and configure 
 
 
 ![image](https://user-images.githubusercontent.com/36288975/226189403-f7179f1a-3eae-4637-826b-ab4ec35ba1e1.png)
@@ -136,9 +135,7 @@ select the appropriate pins as gipo, in or out, USART or required options and co
 ![image](https://user-images.githubusercontent.com/36288975/226189425-2b2414ce-49b3-4b61-a260-c658cb2e4152.png)
 
 
-### STEP-7 :
-
-click on cntrl+S , automaticall C program will be generated 
+7. click on cntrl+S , automaticall C program will be generated 
 
 ![image](https://user-images.githubusercontent.com/36288975/226189443-8b43451d-0b14-47e4-a20b-cc09c6ad8458.png)
 
@@ -146,59 +143,40 @@ click on cntrl+S , automaticall C program will be generated
 ![image](https://user-images.githubusercontent.com/36288975/226189450-85ffa969-2ffb-4788-81e5-72d60fdda0f1.png)
 
 
-### STEP-8 : 
-
-edit the program and as per required 
+8. edit the program and as per required 
 
 
 ![image](https://user-images.githubusercontent.com/36288975/226189461-a573e62f-a109-4631-a250-a20925758fe0.png)
 
-### STEP-9 : 
-
-Add necessary library files of LCD 16x2 , write the program and use project and build  
+9. Add necessary library files of LCD 16x2 , write the program and use project and build  
 
 ![image](https://user-images.githubusercontent.com/36288975/226189554-3f7101ac-3f41-48fc-abc7-480bd6218dec.png)
 
 
-### STEP-10 : 
-
-once the project is bulild 
+10. once the project is bulild 
 
 
 ![image](https://user-images.githubusercontent.com/36288975/226189577-c61cc1eb-3990-4968-8aa6-aefffc766b70.png)
 
-### STEP-11 : 
-
-click on debug option 
+11. click on debug option 
 
 
 ![image](https://user-images.githubusercontent.com/36288975/226189625-37daa9a3-62e9-42b5-a5ce-2ac63345905b.png)
 
 
-### STEP-12 : 
-
-Creating Proteus project and running the simulation
+12. Creating Proteus project and running the simulation
 We are now at the last part of step by step guide on how to simulate STM32 project in Proteus.
 
-### STEP-13 : 
+13. Create a new Proteus project and place STM32F40xx i.e. the same MCU for which the project was created in STM32Cube IDE. 
 
-Create a new Proteus project and place STM32F40xx i.e. the same MCU for which the project was created in STM32Cube IDE. 
-
-### STEP-14 : 
-
-After creation of the circuit as per requirement as shown below 
+14. After creation of the circuit as per requirement as shown below 
 
 ![image](https://user-images.githubusercontent.com/36288975/233856847-32bea88a-565f-4e01-9c7e-4f7ed546ddf6.png)
 
-### STEP-15 : 
+15. Double click on the the MCU part to open settings. Next to the Program File option, give full path to the Hex file generated using STM32Cube IDE. Then set the external crystal frequency to 8M (i.e. 8 MHz). Click OK to save the changes.
 
-Double click on the the MCU part to open settings. Next to the Program File option, give full path to the Hex file generated using STM32Cube IDE. Then set the external crystal frequency to 8M (i.e. 8 MHz). Click OK to save the changes.
 
-https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
-
-### STEP-16 : 
-
-click on debug and simulate using simulation as shown below 
+16. click on debug and simulate using simulation as shown below 
 
 ![image](https://user-images.githubusercontent.com/36288975/233856904-99eb708a-c907-4595-9025-c9dbd89b8879.png)
 
@@ -293,15 +271,15 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 
-## Output screen shots of proteus  :
+## OUTPUT :
 ![image](https://github.com/user-attachments/assets/e2c5aaf1-8c0c-4b9e-b72c-ec53802fea97)
 
  
  
- ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE) : 
+ ## CIRCUIT DIAGRAM : 
  
  ![image](https://github.com/user-attachments/assets/80906e15-602a-4277-9478-e5048e7ced30)
 
-## Result :
+## RESULT :
 Interfacing a lcd display with ARM microcontroller are simulated in proteus and the results are verified.
 
